@@ -1,16 +1,17 @@
 import java.time.LocalDate;
+
 public class Lote {
-    private  long id;
-    private long productId;
-    private LocalDate expireDate;
-    private LocalDate entryDate;
+    long id;
+    long productId;
+    LocalDate expireDate;
+    LocalDate entryDate;
 
     public Lote (
-            long newId,
-            long newProductId,
-            LocalDate newExpireDate,
-            LocalDate newEntryDate
-    ){
+        long newId,
+        long newProductId,
+        LocalDate newExpireDate,
+        LocalDate newEntryDate
+    ) {
         id = newId;
         productId = newProductId;
         expireDate = newExpireDate;

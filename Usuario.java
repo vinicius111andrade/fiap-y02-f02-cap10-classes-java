@@ -1,36 +1,22 @@
 public class Usuario {
-    private static long nextId = 1; // Contador estático para gerar IDs incrementais.
-    private long id;
-    private String nome;
-    private int TipoUsuario; // Referência para o objeto TipoUsuario
+    long id;
+    String nome;
+    int idTipoUsuario; // Referência para o objeto TipoUsuario
 
-    public Usuario(String nome, int TipoUsuario) {
-        this.id = nextId++; // Atribui o próximo ID disponível e incrementa o contador.
+    public Usuario(int id, String nome, int idTipoUsuario) {
+        this.id = id;
         this.nome = nome;
-        this.tipoUsuario = tipoUsuario;
+        this.idTipoUsuario = idTipoUsuario;
     }
 
     // Métodos para atualizar o nome e tipo de usuário
-    public void atualizar(String nome, TipoUsuario tipoUsuario) {
+    public void atualizar(String nome, int idTipoUsuario) {
         this.nome = nome;
-        this.tipoUsuario = tipoUsuario;
+        this.idTipoUsuario = idTipoUsuario;
     }
 
     // Método para simular a inativação do usuário
     public boolean inativar() {
         return true;
-    }
-
-    // Métodos de acesso para id, nome e tipoUsuario
-    public long getId() {
-        return id;
-    }
-
-    public String getNome() {
-        return nome;
-    }
-
-    public TipoUsuario getTipoUsuario() {
-        return tipoUsuario;
     }
 }
