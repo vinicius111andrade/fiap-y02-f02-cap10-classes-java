@@ -19,7 +19,6 @@ public class User {
         this.userTypeId = userTypeId;
     }
 
-    // Métodos para atualizar o name e tipo de usuário
     /**
      * Updates the user on the database.
      * @param name
