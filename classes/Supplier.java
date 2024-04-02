@@ -1,40 +1,90 @@
+/**This Class is responsible for restoring Supplier infos
+ * @author Rodrigo Calado
+ */
+
 public class Supplier {
     Long id;
     String name;
     String address;
     String phone;
 
+    /**
+    * Creates an object of the class Supplier
+    * @author Rodrigo Calado
+    * @param id
+    * @param name
+    * @param address
+    * @param phone
+    * @return Supplier 
+    */
+
     public Supplier(
-        long newId,
-        String newName,
-        String newAddress,
-        String newPhone
+        long id,
+        String name,
+        String address,
+        String phone
         ) {
-        id = newId;
-        name = newName;
-        address = newAddress;
-        phone = newPhone;
+        this.id = id;
+        this.name = name;
+        this.address = address;
+        this.phone = phone;
     }
 
-    
+    public Supplier(
+        String name,
+        String address,
+        String phone
+        ) {
+        this.name = name;
+        this.address = address;
+        this.phone = phone;
+    }
 
-    // ----- CREATE -----
-    // public Supplier create(String name,
-    // String address,
-    // String phone) {
-    //     return Supplier;
-    // }
+    /**
+    * Creates a Supplier in DataBase
+    * @author Rodrigo Calado
+    * @param name
+    * @param address
+    * @param phone
+    * @return Supplier 
+    */
 
-    // public Supplier update(
-    //     long newId,
-    //     String newName,
-    //     String newAddress,
-    //     String newPhone
-    // ) { 
-    //     return Supplier;
-    // }
+    public Supplier create(String name,
+    String address,
+    String phone) 
+    {
+        return new Supplier(name, address, phone);
+    }
 
-    // public boolean delete(long id) {
-    //     return true; 
-    // }
+    /**
+    * Updates a Supplier in DataBase
+    * @author Rodrigo Calado
+    * @param id
+    * @param name
+    * @param address
+    * @param phone
+    * @return Supplier 
+    */
+
+    public Supplier update(
+        long Id,
+        String name,
+        String address,
+        String phone
+    ) 
+    { 
+        return new Supplier(Id, name, address, phone);
+    }
+
+    /**
+    * deletes a Supplier in DataBase
+    * @author Rodrigo Calado
+    * @param id
+    * @return boolean 
+    */
+
+    public boolean delete(long id) 
+    {
+        return true; 
+    }
 }
