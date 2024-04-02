@@ -1,7 +1,7 @@
-/**This Class is responsible for restoring Supplier infos
+/**
+ * This Class is responsible for restoring Supplier infos
  * @author Rodrigo Calado
  */
-
 public class Supplier {
     Long id;
     String name;
@@ -15,9 +15,8 @@ public class Supplier {
     * @param name
     * @param address
     * @param phone
-    * @return Supplier 
+    * @return Supplier
     */
-
     public Supplier(
         long id,
         String name,
@@ -30,6 +29,14 @@ public class Supplier {
         this.phone = phone;
     }
 
+    /**
+    * Creates an object of the class Supplier
+    * @author Rodrigo Calado
+    * @param name
+    * @param address
+    * @param phone
+    * @return Supplier
+    */
     public Supplier(
         String name,
         String address,
@@ -46,12 +53,11 @@ public class Supplier {
     * @param name
     * @param address
     * @param phone
-    * @return Supplier 
+    * @return Supplier
     */
-
     public Supplier create(String name,
     String address,
-    String phone) 
+    String phone)
     {
         return new Supplier(name, address, phone);
     }
@@ -63,28 +69,26 @@ public class Supplier {
     * @param name
     * @param address
     * @param phone
-    * @return Supplier 
+    * @return Supplier
     */
-
     public Supplier update(
         long Id,
         String name,
         String address,
         String phone
-    ) 
-    { 
+    )
+    {
         return new Supplier(Id, name, address, phone);
     }
 
     /**
-    * deletes a Supplier in DataBase
+    * Deletes a Supplier in DataBase
     * @author Rodrigo Calado
     * @param id
-    * @return boolean 
+    * @return boolean
     */
-
-    public boolean delete(long id) 
+    public boolean delete(long id)
     {
-        return true; 
+        return true;
     }
 }

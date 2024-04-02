@@ -1,12 +1,12 @@
-/**This Class is responsible for restoring ProductSupplier infos
+/**
+ * This Class is responsible for restoring ProductSupplier infos
  * @author Rodrigo Calado
  */
-
 public class ProductSupplier {
     Long id;
     Long productId;
     Long supplierId;
-    
+
     /**
     * Creates an object of the class ProductSupplier
     * @author Rodrigo Calado
@@ -14,7 +14,6 @@ public class ProductSupplier {
     * @param productId
     * @param supplierId
     */
-
     public ProductSupplier(
         long id,
         long productId,
