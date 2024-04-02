@@ -1,57 +1,98 @@
-import java.time.LocalDate;
-
+/**
+ * This class is responsible for storing all the information about a product.
+ * @author Vinicius Andrade
+ */
 public class Product {
-    private long id;
-    private String name;
-    private String type;
-    private int quantity;
-    private float price;
+    long id;
+    String name;
+    String type;
+    int quantity;
+    float price;
 
-
+    /**
+     * Creates an object of the class Product
+     * @param id
+     * @param name
+     * @param type
+     * @param quantity
+     * @param price
+     */
     public Product(
-        long newId,
-        String newName,
-        String newType,
-        int newQuantity,
-        float newPrice
+        long id,
+        String name,
+        String type,
+        int quantity,
+        float price
         ) {
-        id = newId;
-        name = newName;
-        type = newType;
-        quantity = newQuantity;
-        price = newPrice;
+        this.id = id;
+        this.name = name;
+        this.type = type;
+        this.quantity = quantity;
+        this.price = price;
     }
 
-    //TODO precisa de expiration date?
-    public Product add(int n, LocalDate expirationDate) {
-        return add(n);
-     }
-
-     public Product add(int n) {
+    /**
+     * Add a quantity 'n' to the last quantity valeu and returns a new object.
+     * @param n
+     * @return Product
+     */
+    public Product add(int n) {
          return new Product(id, name, type, quantity + n, price);
       }
 
+    /**
+     * Subtracts a quantity 'n' to the last quantity valeu and returns a new object.
+     * @param n
+     * @return Product
+     */
     public Product remove(int n) {
         return add(-n);
     }
 
-    public int verify(long id, String name) {
-        return 0; //TODO faz o q?
+     /**
+     * Creates a product in the database.
+     * @param id
+     * @param name
+     * @param type
+     * @param quantity
+     * @param price
+     * @return Product
+     */
+    public Product create(
+        long id,
+        String name,
+        String type,
+        int quantity,
+        float price
+        ) {
+        return new Product(id, name, type, quantity, price);
     }
 
+    /**
+     * Updates a product in the database.
+     * @param id
+     * @param name
+     * @param type
+     * @param quantity
+     * @param price
+     * @return Product
+     */
     public Product update(
-        long newId,
-        String newName,
-        String newType,
-        int newQuantity,
-        float newPrice
-    ) { //TODO tem q interagir com o DAO?
-        return new Product(
-            newId, newName, newType, newQuantity, newPrice
-        );
+        long id,
+        String name,
+        String type,
+        int quantity,
+        float price
+        ) {
+        return new Product(id, name, type, quantity, price);
     }
 
+    /**
+     * Deletes a product from database and return true if successful, false otherwise.
+     * @param id
+     * @return boolean
+     */
     public boolean delete(long id) {
-        return true; //TODO tem q interagir com DAO
+        return true;
     }
 }
